@@ -32,6 +32,8 @@ d3.json("https://gist.githubusercontent.com/josejbocanegra/000e838b77c6ec8e5d579
     const circles = g.selectAll("rect").data(data);
     
     circles.enter().append('circle')
+    .style("fill", "red")
+    .style("opacity", 0.5)
     .attr('cy', d => y(d.lifeexpectancy))
     .attr('cx', d => x(d.purchasingpower))
     .attr('r', d => d.population/1590000); 
